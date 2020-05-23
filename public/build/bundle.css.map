@@ -2,13 +2,11 @@
   "version": 3,
   "file": "bundle.css",
   "sources": [
-    "../../App.svelte",
-    "../../Quiz.svelte"
+    "../../App.svelte"
   ],
   "sourcesContent": [
-    "<script>\n  export let name;\n  import Quiz from \"./Quiz.svelte\";\n</script>\n\n<style>\n  main {\n    text-align: center;\n    padding: 1em;\n    max-width: 240px;\n    margin: 0 auto;\n  }\n\n  h1 {\n    color: #ff3e00;\n    text-transform: uppercase;\n    font-size: 4em;\n    font-weight: 100;\n  }\n\n  :global(h4) {\n    color: #8c00ff;\n  }\n\n  @media (min-width: 640px) {\n    main {\n      max-width: none;\n    }\n  }\n</style>\n\n<main>\n  <h1>Hello {name}!</h1>\n  <p>\n    Visit the\n    <a href=\"https://svelte.dev/tutorial\">Svelte tutorial</a>\n    to learn how to build Svelte apps.\n  </p>\n  <Quiz />\n</main>\n",
-    "<script>\n  let result = \"\";\n  let correctAnswer = \"b\";\n  let answers = [\"a\", \"b\", \"c\", \"d\"];\n\n  function pickAnswer(answer) {\n    if (answer === correctAnswer) {\n      return (result = \"Correct!\");\n    }\n    result = \"OOPS!\";\n  }\n</script>\n\n<style>\n  h4 {\n    color: red;\n  }\n</style>\n\n<div>\n\n  {#if result}\n    <h4>{result}</h4>\n  {:else}\n    <h4>Please Pick an Answer</h4>\n  {/if}\n\n  {#each answers as answer}\n    <button on:click={() => pickAnswer(answer)}>\n      Answer {answer.toUpperCase()}\n    </button>\n  {/each}\n\n</div>\n"
+    "<script>\n  export let name;\n  import Quiz from \"./Quiz.svelte\";\n</script>\n\n<style>\n  main {\n    text-align: center;\n    padding: 1em;\n    max-width: 240px;\n    margin: 0 auto;\n  }\n\n  h1 {\n    color: #ff3e00;\n    text-transform: uppercase;\n    font-size: 4em;\n    font-weight: 100;\n  }\n\n  :global(h4) {\n    color: #8c00ff;\n  }\n\n  @media (min-width: 640px) {\n    main {\n      max-width: none;\n    }\n  }\n</style>\n\n<main>\n  <h1>Hello {name}!</h1>\n  <p>\n    Visit the\n    <a href=\"https://svelte.dev/tutorial\">Svelte tutorial</a>\n    to learn how to build Svelte apps.\n  </p>\n  <Quiz />\n</main>\n"
   ],
   "names": [],
-  "mappings": "AAME,IAAI,eAAC,CAAC,AACJ,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,GAAG,CACZ,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC,AAED,EAAE,eAAC,CAAC,AACF,KAAK,CAAE,OAAO,CACd,cAAc,CAAE,SAAS,CACzB,SAAS,CAAE,GAAG,CACd,WAAW,CAAE,GAAG,AAClB,CAAC,AAEO,EAAE,AAAE,CAAC,AACX,KAAK,CAAE,OAAO,AAChB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzB,IAAI,eAAC,CAAC,AACJ,SAAS,CAAE,IAAI,AACjB,CAAC,AACH,CAAC;ACdD,EAAE,eAAC,CAAC,AACF,KAAK,CAAE,GAAG,AACZ,CAAC"
+  "mappings": "AAME,IAAI,eAAC,CAAC,AACJ,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,GAAG,CACZ,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC,AAED,EAAE,eAAC,CAAC,AACF,KAAK,CAAE,OAAO,CACd,cAAc,CAAE,SAAS,CACzB,SAAS,CAAE,GAAG,CACd,WAAW,CAAE,GAAG,AAClB,CAAC,AAEO,EAAE,AAAE,CAAC,AACX,KAAK,CAAE,OAAO,AAChB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzB,IAAI,eAAC,CAAC,AACJ,SAAS,CAAE,IAAI,AACjB,CAAC,AACH,CAAC"
 }
