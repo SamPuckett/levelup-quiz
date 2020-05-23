@@ -1,5 +1,4 @@
 <script>
-  export let name;
   import Quiz from "./Quiz.svelte";
 </script>
 
@@ -18,10 +17,6 @@
     font-weight: 100;
   }
 
-  :global(h4) {
-    color: #8c00ff;
-  }
-
   @media (min-width: 640px) {
     main {
       max-width: none;
@@ -30,11 +25,6 @@
 </style>
 
 <main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the
-    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
-    to learn how to build Svelte apps.
-  </p>
+  <h1>Level Up Quiz</h1>
   <Quiz />
 </main>
